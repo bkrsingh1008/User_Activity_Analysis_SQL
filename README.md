@@ -7,23 +7,22 @@ The goal of this project is to uncover trends in user engagement by analyzing lo
 
 Tools and technologies:
 -----------------------
-The analysis was conducted using SQL, leveraging Common Table Expressions (CTEs) and window functions to handle complex queries across large datasets.
-
-Methodologies:
---------------
-I wrote queries to analyze login frequency, identify inactive users, calculate quarterly session growth, and detect days with no logins. Advanced SQL techniques like window functions and joins were used to calculate percentage changes and find top users per day.
+The analysis was conducted using MS SQL Server, used Common Table Expressions (CTEs) and window functions to handle complex queries across large datasets.
 
 Data Model:
 -----------
-The data consisted of two tables: users_id and logins. I used SQL queries to filter login records, group data by time periods (e.g., quarters), and compute session counts and activity metrics.
+The data consisted of two tables: users and logins. I used SQL queries to filter login records, group data by time periods (e.g., quarters), and compute session counts and activity metrics.
+
+Learnings:
+--------------
+I wrote queries and utilized various SQL functions and techniques, including date functions like `DATETRUNC`, `DATEADD`, `DATEDIFF`, `DATEPART`, and `GETDATE` to handle date-based calculations such as finding the month, year, and specific time periods. I also leveraged `MAX` to extract the latest login, along with `GROUP BY` and `HAVING` to aggregate data. CTEs and subqueries helped simplify complex queries, and I applied window functions for tasks like calculating session percentage changes and ranking users based on activity.
 
 Challenges Faced:
 -----------------
-One challenge was calculating percentage change in session counts across quarters, which required advanced SQL techniques like window functions and date partitioning
+One challenge was calculating percentage change in session counts across quarters, which required advanced SQL techniques like window functions and date partitioning. Also faced issue in identifying few date functions to uncover the insights.
 
 Key Insights:
 --------------
-The analysis revealed that session activity dropped by 12% in the last quarter, while certain power users had daily login streaks. Additionally, several inactive users were identified for targeted re-engagement campaigns.
-I identified a 12% drop in sessions in the last quarter, highlighted daily power users, and pinpointed days with zero user activity, which provides valuable insights for improving user retention strategies.
+There was a 40% increase in Quarter 4 and a 14.29% increase in Quarter 1, but there is no drop in the sessions, highlighted daily power users, and pinpointed days with zero user activity, which provides valuable insights for improving user retention strategies.
 
 This project enhanced my understanding of SQL for business analytics, especially working with date-based functions and advanced query techniques.
